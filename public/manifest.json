@@ -2,8 +2,8 @@
   "manifestVersion": "2.3.0",
   "pluginVersion": "0.3.0",
   "name": {
-    "en": "Demo Plugin - Step 1",
-    "de": "Demo Plugin - Step 1"
+    "en": "COYO Tutorial Plugin",
+    "de": "COYO Tutorial Plugin"
   },
   "description": {
     "en": "A simple demo plug-in",
@@ -46,6 +46,18 @@
         "de": "Ansicht 2 wird angezeigt"
       },
       "url": "/ep2.html"
+    },
+    {
+      "id": "4f434887-9289-48ac-986d-4ff1f37ab999",
+      "name": {
+        "en": "Episode 1",
+        "de": "Episode 1"
+      },
+      "description": {
+        "en": "Displaying episode 1",
+        "de": "Episode 1 wird angezeigt"
+      },
+      "url": "/episode1.html"
     }
   ]
 }
