@@ -1,6 +1,6 @@
 {
   "name": "coyo-tutorial",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A simple getting-started demo project for developing COYO plug-ins",
   "repository": {
     "type": "git",
