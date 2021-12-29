@@ -1,3 +1,10 @@
 body {
-    font-family: 'Noto Sans';
+    font-family: 'Noto Sans', sans-serif;
+}
+.bright {
+    background-color: #AFD62D;
+}
+
+.shady {
+    background-color: #B366FF;
 }
