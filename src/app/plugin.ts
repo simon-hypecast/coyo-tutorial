@@ -4,7 +4,7 @@ export class DemoPlugin {
     constructor() {
         new PluginAdapter().init().then(data => {
             const name = data['ctx.userName'];
-            const email = data['ctx.emailName'];
+            const email = data['ctx.userEmail'];
             this.getName(name);
             this.getEmail(email);
         });
