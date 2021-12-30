@@ -3,6 +3,9 @@ const jwkToPem = require('jwk-to-pem');
 
 function getKey(header, callback){
     console.log(header);
+    if (header.jku === undefined) {
+        console.log("header.jku is undefined");
+    }
     if (!header.jku || header.jku.indexOf('https://certificates.plugins.coyoapp.com/') < 0) {
         callback(new Error('Unknown or untrusted certificate URL: ' + header.jku), null);
         return;
