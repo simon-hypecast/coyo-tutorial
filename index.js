@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const jwt = require('./jwt')
+const jwt = require('./jwt');
 const path = require('path');
 const PORT = process.env.PORT || 5001;
 
