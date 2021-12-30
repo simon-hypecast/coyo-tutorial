@@ -35,8 +35,8 @@ module.exports = {
         return jwt.decode(token, {complete: true});
     },
     verify: (token, callback) => {
-        jwt.verify(token, getKey, {complete: true}, function(err, decoded) {
+        return jwt.verify(token, getKey, {complete: true}, function(err, decoded) {
             callback(err, decoded);
         });
     }
-}
+};
