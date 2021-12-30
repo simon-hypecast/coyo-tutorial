@@ -2,7 +2,8 @@ import {PluginAdapter} from '@coyoapp/plugin-adapter';
 
 export class DemoPlugin {
     constructor() {
-        new PluginAdapter().init().then(data => {
+        const adapter = new PluginAdapter();
+        adapter.init().then(data => {
             console.log(data);
             const name = data.claims.ctx.userName;
             this.getName(name);
@@ -22,6 +23,7 @@ export class DemoPlugin {
             }
 
         });
+        adapter.observeHeight();
     }
 
     private getName(userName: string) {
