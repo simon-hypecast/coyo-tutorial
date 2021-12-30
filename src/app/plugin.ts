@@ -7,7 +7,7 @@ export class DemoPlugin {
             const name = data.claims.ctx.userName;
             this.getName(name);
 
-            console.log(data.claims.cfg.background);
+            console.log(data.claims.cfg);
             const background = data.claims.cfg.background;
             this.setBackgroundColor(background);
         });
