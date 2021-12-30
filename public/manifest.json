@@ -9,7 +9,7 @@
     "en": "A simple demo plug-in",
     "de": "Ein einfaches Beispiel-Plug-in"
   },
-  "context": ["userName, userEmail"],
+  "context": ["userName", "userEmail"],
   "config": [
     {
       "key": "background",
