@@ -20,7 +20,7 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "@coyoapp/plugin-adapter": "^0.1.7",
+    "@coyoapp/plugin-adapter": "^0.2.1",
     "express": "^4.17.1"
   },
   "engines": {

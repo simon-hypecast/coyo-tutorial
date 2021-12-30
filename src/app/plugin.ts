@@ -3,10 +3,10 @@ import {PluginAdapter} from '@coyoapp/plugin-adapter';
 export class DemoPlugin {
     constructor() {
         new PluginAdapter().init().then(data => {
-            const name = data['ctx.userName'];
-            const email = data['ctx.userEmail'];
+            console.log(data);
+            const name = data.claims.ctx.userName;
+
             this.getName(name);
-            this.getEmail(email);
         });
     }
 
@@ -15,8 +15,4 @@ export class DemoPlugin {
         nameElem.innerText = userName;
     }
 
-    private getEmail(email: string) {
-        const emailElement = document.getElementById('userEmail')!;
-        emailElement.innerText = email;
-    }
 }
