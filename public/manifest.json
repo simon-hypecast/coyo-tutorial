@@ -12,7 +12,8 @@
   "lifecycle": {
     "url": "/lifecycle/",
     "events": [
-      "install"
+      "install",
+      "uninstall"
     ]
   },
   "context": ["userName", "userEmail"],
