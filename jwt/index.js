@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const jwkToPem = require('jwk-to-pem');
 
 function getKey(header, callback){
-    console.log(header.jku);
+    console.log(header);
     if (!header.jku || header.jku.indexOf('https://certificates.plugins.coyoapp.com/') < 0) {
         callback(new Error('Unknown or untrusted certificate URL: ' + header.jku), null);
         return;

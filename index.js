@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended: true}));
 
 // lifecycle API implementation
 app.post('/lifecycle/install', (req, res) => {
-    console.log('Received life cycle event: uninstall %s', req.body.token);
+    console.log('Received life cycle event: install %s', req.body.token);
     jwt.verify(req.body.token, (err, result) => {
         if (result) {
             console.log('verified payload: %j', result.payload);
