@@ -77,7 +77,64 @@
         "en": "Displaying episode 1",
         "de": "Episode 1 wird angezeigt"
       },
-      "url": "/episode1.html"
+      "url": "/episode1.html",
+      "config": [
+        {
+          "key": "spotifyLink",
+          "type": "text",
+          "label": {
+            "en": "Spotify Link",
+            "de": "Spotify Link"
+          },
+          "placeholder": {
+            "en": "https://open.spotify.com/album/4RuzGKLG99XctuBMBkFFOC",
+            "de": "https://open.spotify.com/album/4RuzGKLG99XctuBMBkFFOC"
+          },
+          "description": {
+            "en": "Enter a spotify link you get through the share menu.",
+            "de": "Gib einen Spotify Link, den du über das Teilen-Menu erhältst, ein."
+          },
+          "pattern": "^https:\\/\\/open\\.spotify\\.com\\/(track|album|playlist)\\/[A-Za-z0-9]+$",
+          "required": true
+        },
+        {
+          "key": "spotifyLayout",
+          "type": "radio",
+          "label": {
+            "en": "Spotify Layout",
+            "de": "Spotify Layout"
+          },
+          "description": {
+            "en": "The layout of the spotify view",
+            "de": "Layout der Spotify Anzeige"
+          },
+          "options": [
+            {
+              "value": "LARGE",
+              "label": {
+                "en": "Large",
+                "de": "Groß"
+              },
+              "description": {
+                "en": "Large layout with song list",
+                "de": "Große Anzeige mit Liederliste"
+              }
+            },
+            {
+              "value": "COMPACT",
+              "label": {
+                "en": "Compact",
+                "de": "Kompakt"
+              },
+              "description": {
+                "en": "Compact layout with single song",
+                "de": "Kompakte Anzeige mit einem Lied"
+              }
+            }
+          ],
+          "required": true
+        }
+      ]
     }
   ]
 }
