@@ -5,14 +5,23 @@ export class DemoPlugin {
         new PluginAdapter().init().then(data => {
             console.log(data);
             const name = data.claims.ctx.userName;
-
             this.getName(name);
+
+            console.log(data.claims.cfg.background);
+            const background = data.claims.cfg.background;
+            this.setBackgroundColor(background);
         });
     }
 
     private getName(userName: string) {
         const nameElem = document.getElementById('userName')!;
-        nameElem.innerText = userName;
+        if (nameElem) {
+            nameElem.innerText = userName;
+        }
+    }
+
+    private setBackgroundColor(background: string) {
+        document.body.style.backgroundColor = background;
     }
 
 }

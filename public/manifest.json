@@ -1,6 +1,6 @@
 {
   "manifestVersion": "2.3.0",
-  "pluginVersion": "0.3.0",
+  "pluginVersion": "0.3.1",
   "name": {
     "en": "COYO Tutorial Plugin",
     "de": "COYO Tutorial Plugin"
@@ -9,7 +9,27 @@
     "en": "A simple demo plug-in",
     "de": "Ein einfaches Beispiel-Plug-in"
   },
-    "context": ["userName", "userEmail"],
+  "context": ["userName"],
+  "config": [
+    {
+      "key": "background",
+      "type": "text",
+      "label": {
+        "en": "Background color",
+        "de": "Hintergrundfarbe"
+      },
+      "placeholder": {
+        "en": "HEX color - #AFD62D",
+        "de": "HEX color - #AFD62D"
+      },
+      "description": {
+        "en": "Enter a valid HEX color code.",
+        "de": "Gib einen validen HEX-Farbcode an."
+      },
+      "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+      "required": true
+    }
+  ],
   "entryPoints": [
     {
       "id": "510e9e0c-e3b8-44a8-8db1-5185d3d84888",
