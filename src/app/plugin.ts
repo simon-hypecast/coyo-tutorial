@@ -43,7 +43,7 @@ export class DemoPlugin {
 
     private addSpotify(spotifyLink: string, spotifyLayout: "LARGE" | "COMPACT") {
         const spotifyFrame = document.createElement("iframe");
-        spotifyFrame.width = '300';
+        spotifyFrame.width = '200';
         spotifyFrame.height = spotifyLayout === "LARGE" ? '380' : '80';
         spotifyFrame.allow = "encrypted-media";
         spotifyFrame.src = spotifyLink.replace('https://open.spotify.com', 'https://open.spotify.com/embed');
