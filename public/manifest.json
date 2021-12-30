@@ -9,6 +9,12 @@
     "en": "A simple demo plug-in",
     "de": "Ein einfaches Beispiel-Plug-in"
   },
+  "lifecycle": {
+    "url": "/lifecycle/",
+    "events": [
+      "install"
+    ]
+  },
   "context": ["userName", "userEmail"],
   "config": [
     {
