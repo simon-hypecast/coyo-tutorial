@@ -21,7 +21,8 @@
   "license": "ISC",
   "dependencies": {
     "@coyoapp/plugin-adapter": "^0.2.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
   },
   "engines": {
     "node": ">=12.x"
