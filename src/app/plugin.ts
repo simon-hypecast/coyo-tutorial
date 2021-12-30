@@ -7,6 +7,9 @@ export class DemoPlugin {
             const name = data.claims.ctx.userName;
             this.getName(name);
 
+            const email = data.claims.ctx.userEmail;
+            this.getEmail(email);
+
             console.log(data.claims.cfg);
             const background = data.claims.cfg.background;
             this.setBackgroundColor(background);
@@ -17,6 +20,12 @@ export class DemoPlugin {
         const nameElem = document.getElementById('userName')!;
         if (nameElem) {
             nameElem.innerText = userName;
+        }
+    }
+    private getEmail(userEmail: string) {
+        const emailElem = document.getElementById('userEmail')!;
+        if (emailElem) {
+            emailElem.innerText = userEmail;
         }
     }
 
