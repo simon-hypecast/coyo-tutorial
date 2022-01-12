@@ -2,10 +2,6 @@ const jwt = require('jsonwebtoken');
 const jwkToPem = require('jwk-to-pem');
 
 function getKey(header, callback){
-    console.log(header);
-    if (header.jku === undefined) {
-        console.log("header.jku is undefined");
-    }
     if (!header.jku || header.jku.indexOf('https://certificates.plugins.coyoapp.com/') < 0) {
         callback(new Error('Unknown or untrusted certificate URL: ' + header.jku), null);
         return;
@@ -35,7 +31,7 @@ module.exports = {
         return jwt.decode(token, {complete: true});
     },
     verify: (token, callback) => {
-        return jwt.verify(token, getKey, {complete: true}, function(err, decoded) {
+        jwt.verify(token, getKey, {complete: true}, function(err, decoded) {
             callback(err, decoded);
         });
     }
