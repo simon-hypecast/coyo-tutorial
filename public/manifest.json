@@ -21,7 +21,7 @@
         "en": "... tbd. ....",
         "de": "... tbd. ...."
       },
-      "url": "/ep2.html",
+      "url": "/coyo-plugin",
       "config": [
         {
           "key": "hypecastEpisodeLink",
@@ -30,15 +30,11 @@
             "en": "With this plugin you can listen to your Hypecast podcasts in your COYO app.",
             "de": "Mit diesem Plugin kannst du deine Hypecast Podcasts in der COYO app hören."
           },
-          "placeholder": {
-            "en": "https://open.spotify.com/album/4RuzGKLG99XctuBMBkFFOC",
-            "de": "https://open.spotify.com/album/4RuzGKLG99XctuBMBkFFOC"
-          },
           "description": {
             "en": "Please add the url of the episode.",
             "de": "Bitte gib die Url der Episode an."
           },
-          "pattern": "^https:\\/\\/open\\.spotify\\.com\\/(track|album|playlist)\\/[A-Za-z0-9]+$",
+          "pattern": "^https:\\/\\/[A-Za-z0-9]+$\\.hypecast\\.one\\/coyo-plugin\\/[A-Za-z0-9]+$",
           "required": true
         },
         {
