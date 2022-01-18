@@ -9,40 +9,8 @@
     "en": "A simple demo plug-in",
     "de": "Ein einfaches Beispiel-Plug-in"
   },
-  "context": ["userName"],
-  "config": [
-    {
-      "key": "background",
-      "type": "text",
-      "label": {
-        "en": "Background color",
-        "de": "Hintergrundfarbe"
-      },
-      "placeholder": {
-        "en": "HEX color - #AFD62D",
-        "de": "HEX color - #AFD62D"
-      },
-      "description": {
-        "en": "Enter a valid HEX color code.",
-        "de": "Gib einen validen HEX-Farbcode an."
-      },
-      "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
-      "required": true
-    }
-  ],
+  "context": ["userName", "userEmail"],
   "entryPoints": [
-    {
-      "id": "510e9e0c-e3b8-44a8-8db1-5185d3d844ce",
-      "name": {
-        "en": "Personal View 1",
-        "de": "Persönliche Ansicht 1"
-      },
-      "description": {
-        "en": "Greeting the user",
-        "de": "Persönlicher Gruß"
-      },
-      "url": "/ep1.html"
-    },
     {
       "id": "4f434887-9289-48ac-986d-4ff1f37ab618",
       "name": {
