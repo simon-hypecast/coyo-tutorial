@@ -1,22 +1,15 @@
 {
-  "manifestVersion": "2.3.0",
-  "pluginVersion": "0.4.2",
+  "manifestVersion": "2.0.0",
+  "pluginVersion": "0.3.1",
   "name": {
-    "en": "COYO Tutorial Plugin",
-    "de": "COYO Tutorial Plugin"
+    "en": "Demo Plugin - Step 3a",
+    "de": "Demo Plugin - Step 3a"
   },
   "description": {
     "en": "A simple demo plug-in",
     "de": "Ein einfaches Beispiel-Plug-in"
   },
-  "lifecycle": {
-    "url": "/lifecycle/",
-    "events": [
-      "install",
-      "uninstall"
-    ]
-  },
-  "context": ["userName", "userEmail"],
+  "context": ["userName"],
   "config": [
     {
       "key": "background",
@@ -39,26 +32,14 @@
   ],
   "entryPoints": [
     {
-      "id": "510e9e0c-e3b8-44a8-8db1-5185d3d84888",
-      "url": "/",
-      "name": {
-        "en": "My first plug-in view",
-        "de": "Meine erste Plug-in Ansicht"
-      },
-      "description": {
-        "en": "Showing my plug-in",
-        "de": "Mein Plug-in"
-      }
-    },
-    {
       "id": "510e9e0c-e3b8-44a8-8db1-5185d3d844ce",
       "name": {
-        "en": "View 1",
-        "de": "Ansicht 1"
+        "en": "Personal View 1",
+        "de": "Persönliche Ansicht 1"
       },
       "description": {
-        "en": "Displaying view 1",
-        "de": "Ansicht 1 wird angezeigt"
+        "en": "Greeting the user",
+        "de": "Persönlicher Gruß"
       },
       "url": "/ep1.html"
     },
@@ -72,19 +53,7 @@
         "en": "Displaying view 2",
         "de": "Ansicht 2 wird angezeigt"
       },
-      "url": "/ep2.html"
-    },
-    {
-      "id": "4f434887-9289-48ac-986d-4ff1f37ab999",
-      "name": {
-        "en": "Episode 1",
-        "de": "Episode 1"
-      },
-      "description": {
-        "en": "Displaying episode 1",
-        "de": "Episode 1 wird angezeigt"
-      },
-      "url": "/episode1.html",
+      "url": "/ep2.html",
       "config": [
         {
           "key": "spotifyLink",
