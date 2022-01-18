@@ -1,13 +1,13 @@
 {
   "manifestVersion": "2.3.0",
-  "pluginVersion": "0.0.1",
+  "pluginVersion": "0.4.1",
   "name": {
-    "en": "Hypecast Plug-in",
-    "de": "Hypecast Plug-in"
+    "en": "Demo Plugin - Step 4b",
+    "de": "Demo Plugin - Step 4b"
   },
   "description": {
-    "en": "The Hypecast plug-in for COYO",
-    "de": "Das Hypecast Plug-in für COYO"
+    "en": "A simple demo plug-in",
+    "de": "Ein einfaches Beispiel-Plug-in"
   },
   "lifecycle": {
     "url": "/lifecycle/",
@@ -16,44 +16,80 @@
       "uninstall"
     ]
   },
-  "context": ["userName", "userEmail"],
+  "context": ["userName"],
+  "config": [
+    {
+      "key": "background",
+      "type": "text",
+      "label": {
+        "en": "Background color",
+        "de": "Hintergrundfarbe"
+      },
+      "placeholder": {
+        "en": "HEX color - #AFD62D",
+        "de": "HEX color - #AFD62D"
+      },
+      "description": {
+        "en": "Enter a valid HEX color code.",
+        "de": "Gib einen validen HEX-Farbcode an."
+      },
+      "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+      "required": true
+    }
+  ],
   "entryPoints": [
+    {
+      "id": "510e9e0c-e3b8-44a8-8db1-5185d3d844ce",
+      "name": {
+        "en": "Personal View 1",
+        "de": "Persönliche Ansicht 1"
+      },
+      "description": {
+        "en": "Greeting the user",
+        "de": "Persönlicher Gruß"
+      },
+      "url": "/ep1.html"
+    },
     {
       "id": "4f434887-9289-48ac-986d-4ff1f37ab618",
       "name": {
-        "en": "Hypecast Web Player",
-        "de": "Hypecast Web Player"
+        "en": "View 2",
+        "de": "Ansicht 2"
       },
       "description": {
-        "en": "... tbd. ....",
-        "de": "... tbd. ...."
+        "en": "Displaying view 2",
+        "de": "Ansicht 2 wird angezeigt"
       },
-      "url": "/coyo-plugin",
+      "url": "/ep2.html",
       "config": [
         {
-          "key": "hypecastEpisodeLink",
+          "key": "spotifyLink",
           "type": "text",
           "label": {
-            "en": "With this plugin you can listen to your Hypecast podcasts in your COYO app.",
-            "de": "Mit diesem Plugin kannst du deine Hypecast Podcasts in der COYO app hören."
+            "en": "Spotify Link",
+            "de": "Spotify Link"
+          },
+          "placeholder": {
+            "en": "https://open.spotify.com/album/4RuzGKLG99XctuBMBkFFOC",
+            "de": "https://open.spotify.com/album/4RuzGKLG99XctuBMBkFFOC"
           },
           "description": {
-            "en": "Please add the url of the episode.",
-            "de": "Bitte gib die Url der Episode an."
+            "en": "Enter a spotify link you get through the share menu.",
+            "de": "Gib einen Spotify Link, den du über das Teilen-Menu erhältst, ein."
           },
-          "pattern": "^https:\\/\\/[A-Za-z0-9]+$\\.hypecast\\.one\\/coyo-plugin\\/[A-Za-z0-9]+$",
+          "pattern": "^https:\\/\\/open\\.spotify\\.com\\/(track|album|playlist)\\/[A-Za-z0-9]+$",
           "required": true
         },
         {
-          "key": "hypecastLayout",
+          "key": "spotifyLayout",
           "type": "radio",
           "label": {
-            "en": "Hypecast Layout",
-            "de": "Hypecast Layout"
+            "en": "Spotify Layout",
+            "de": "Spotify Layout"
           },
           "description": {
-            "en": "The layout of the hypecast web player",
-            "de": "Layout des Hypecast Web Players"
+            "en": "The layout of the spotify view",
+            "de": "Layout der Spotify Anzeige"
           },
           "options": [
             {
