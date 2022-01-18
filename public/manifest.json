@@ -1,5 +1,5 @@
 {
-  "manifestVersion": "2.3.1",
+  "manifestVersion": "2.3.0",
   "pluginVersion": "0.0.1",
   "name": {
     "en": "Hypecast Plug-in",
@@ -18,8 +18,8 @@
         "de": "Hypecast Web Player"
       },
       "description": {
-        "en": "Displaying view 2",
-        "de": "Ansicht 2 wird angezeigt"
+        "en": "... tbd. ....",
+        "de": "... tbd. ...."
       },
       "url": "/ep2.html",
       "config": [
@@ -42,7 +42,7 @@
           "required": true
         },
         {
-          "key": "spotifyLayout",
+          "key": "hypecastLayout",
           "type": "radio",
           "label": {
             "en": "Spotify Layout",
