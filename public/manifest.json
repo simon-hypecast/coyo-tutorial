@@ -1,21 +1,21 @@
 {
-  "manifestVersion": "2.0.0",
-  "pluginVersion": "0.3.1",
+  "manifestVersion": "2.3.1",
+  "pluginVersion": "0.0.1",
   "name": {
-    "en": "Demo Plugin - Step 3a",
-    "de": "Demo Plugin - Step 3a"
+    "en": "Hypecast Plug-in",
+    "de": "Hypecast Plug-in"
   },
   "description": {
-    "en": "A simple demo plug-in",
-    "de": "Ein einfaches Beispiel-Plug-in"
+    "en": "The Hypecast plug-in for COYO",
+    "de": "Das Hypecast Plug-in für COYO"
   },
   "context": ["userName", "userEmail"],
   "entryPoints": [
     {
       "id": "4f434887-9289-48ac-986d-4ff1f37ab618",
       "name": {
-        "en": "View 2",
-        "de": "Ansicht 2"
+        "en": "Hypecast Web Player",
+        "de": "Hypecast Web Player"
       },
       "description": {
         "en": "Displaying view 2",
@@ -24,19 +24,19 @@
       "url": "/ep2.html",
       "config": [
         {
-          "key": "spotifyLink",
+          "key": "hypecastEpisodeLink",
           "type": "text",
           "label": {
-            "en": "Spotify Link",
-            "de": "Spotify Link"
+            "en": "With this plugin you can listen to your Hypecast podcasts in your COYO app.",
+            "de": "Mit diesem Plugin kannst du deine Hypecast Podcasts in der COYO app hören."
           },
           "placeholder": {
             "en": "https://open.spotify.com/album/4RuzGKLG99XctuBMBkFFOC",
             "de": "https://open.spotify.com/album/4RuzGKLG99XctuBMBkFFOC"
           },
           "description": {
-            "en": "Enter a spotify link you get through the share menu.",
-            "de": "Gib einen Spotify Link, den du über das Teilen-Menu erhältst, ein."
+            "en": "Please add the url of the episode.",
+            "de": "Bitte gib die Url der Episode an."
           },
           "pattern": "^https:\\/\\/open\\.spotify\\.com\\/(track|album|playlist)\\/[A-Za-z0-9]+$",
           "required": true
