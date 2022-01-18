@@ -41,12 +41,12 @@
           "key": "hypecastLayout",
           "type": "radio",
           "label": {
-            "en": "Spotify Layout",
-            "de": "Spotify Layout"
+            "en": "Hypecast Layout",
+            "de": "Hypecast Layout"
           },
           "description": {
-            "en": "The layout of the spotify view",
-            "de": "Layout der Spotify Anzeige"
+            "en": "The layout of the hypecast web player",
+            "de": "Layout des Hypecast Web Players"
           },
           "options": [
             {
