@@ -9,6 +9,13 @@
     "en": "The Hypecast plug-in for COYO",
     "de": "Das Hypecast Plug-in für COYO"
   },
+  "lifecycle": {
+    "url": "/lifecycle/",
+    "events": [
+      "install",
+      "uninstall"
+    ]
+  },
   "context": ["userName", "userEmail"],
   "entryPoints": [
     {
