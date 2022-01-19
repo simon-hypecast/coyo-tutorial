@@ -8,9 +8,9 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node test.js",
-    "build": "webpack"
+   "start": "NODE_OPTIONS=--openssl-legacy-provider && node index.js",
+    "test": "NODE_OPTIONS=--openssl-legacy-provider && node test.js",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider && webpack"
   },
   "keywords": [
     "coyo",
