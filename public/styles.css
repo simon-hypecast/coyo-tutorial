@@ -1,10 +1,19 @@
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Source Sans Pro' ;
 }
+
 .bright {
     background-color: #AFD62D;
 }
 
 .shady {
     background-color: #B366FF;
+}
+
+.emphasize {
+    font-style: oblique;
+}
+
+iframe {
+    border: 0;
 }

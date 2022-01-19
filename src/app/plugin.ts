@@ -4,38 +4,25 @@ export class DemoPlugin {
     constructor() {
         const adapter = new PluginAdapter();
         adapter.init().then(data => {
-            console.log(data);
-            const name = data.claims.ctx.userName;
-            this.getName(name);
+            const name = data['ctx.userName'];
+            this.changeName(name);
 
-            const email = data.claims.ctx.userEmail;
-            this.getEmail(email);
-
-            console.log(data.claims.cfg);
-            const background = data.claims.cfg.background;
+            const background = data['cfg.background'];
             this.setBackgroundColor(background);
 
-
-            const spotifyLayout = data.claims.cfg.spotifyLayout;
-            const spotifyLink = data.claims.cfg.spotifyLink;
+            const spotifyLayout = data['cfg.spotifyLayout'];
+            const spotifyLink = data['cfg.spotifyLink'];
             if (spotifyLink && spotifyLayout) {
                 this.addSpotify(spotifyLink, spotifyLayout);
             }
-
         });
         adapter.observeHeight();
     }
 
-    private getName(userName: string) {
+    private changeName(userName: string) {
         const nameElem = document.getElementById('userName')!;
         if (nameElem) {
             nameElem.innerText = userName;
-        }
-    }
-    private getEmail(userEmail: string) {
-        const emailElem = document.getElementById('userEmail')!;
-        if (emailElem) {
-            emailElem.innerText = userEmail;
         }
     }
 
@@ -45,11 +32,10 @@ export class DemoPlugin {
 
     private addSpotify(spotifyLink: string, spotifyLayout: "LARGE" | "COMPACT") {
         const spotifyFrame = document.createElement("iframe");
-        spotifyFrame.width = '220';
+        spotifyFrame.width = '300';
         spotifyFrame.height = spotifyLayout === "LARGE" ? '380' : '80';
         spotifyFrame.allow = "encrypted-media";
         spotifyFrame.src = spotifyLink.replace('https://open.spotify.com', 'https://open.spotify.com/embed');
         document.body.appendChild(spotifyFrame);
     }
-
 }

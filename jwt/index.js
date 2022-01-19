@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const jwkToPem = require('jwk-to-pem');
+const https = require('https');
 
 function getKey(header, callback){
     if (!header.jku || header.jku.indexOf('https://certificates.plugins.coyoapp.com/') < 0) {
@@ -25,10 +26,10 @@ function getKey(header, callback){
     });
 }
 
-
 module.exports = {
     decode: (token) => {
-        return jwt.decode(token, {complete: true});
+        let decodedToken = jwt.decode(token, {complete: true});
+        return decodedToken;
     },
     verify: (token, callback) => {
         jwt.verify(token, getKey, {complete: true}, function(err, decoded) {

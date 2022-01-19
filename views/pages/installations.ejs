@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Plug-in installations</h2>
+<p>Your plug-in has been installed in <%= total %> COYO social intranets.</p>
+<table>
+<tr><th>Tenant Id</th><th>Tenant URL</th><th>Plugin Id</th></tr>
+    <% installations.forEach(function(r) { %>
+        <tr>
+        <td><%= r.tenant_id %></td>
+        <td><%= r.tenant_url %></td>
+        <td><%= r.plugin_id %></td>
+        </tr>
+    <% }); %>
+</table>
+
+</div>
+
+</body>
+</html>
