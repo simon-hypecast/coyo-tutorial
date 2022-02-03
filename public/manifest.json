@@ -1,22 +1,15 @@
 {
-  "manifestVersion": "2.0.0",
-  "pluginVersion": "0.4.1",
+  "manifestVersion": "2.3.0",
+  "pluginVersion": "0.0.2",
   "name": {
-    "en": "Demo Plugin - Step 4b",
-    "de": "Demo Plugin - Step 4b"
+    "en": "Hypecast Plug-in",
+    "de": "Hypecast Plug-in"
   },
   "description": {
-    "en": "A simple demo plug-in",
-    "de": "Ein einfaches Beispiel-Plug-in"
+    "en": "The Hypecast plug-in for COYO",
+    "de": "Das Hypecast Plug-in für COYO"
   },
-  "lifecycle": {
-    "url": "/lifecycle/",
-    "events": [
-      "install",
-      "uninstall"
-    ]
-  },
-  "context": ["userName"],
+  "context": ["userName", "userEmail"],
   "config": [
     {
       "key": "background",
