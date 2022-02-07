@@ -4,10 +4,10 @@ export class DemoPlugin {
     constructor() {
         const adapter = new PluginAdapter();
         adapter.init().then(data => {
-            const name = data['ctx.userName'];
+            const name = data.claims.ctx.userName;
             this.changeName(name);
 
-            const background = data['cfg.background'];
+            const background = data.claims.cfg.background;
             this.setBackgroundColor(background);
         });
         adapter.observeHeight();
